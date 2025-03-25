@@ -66,28 +66,6 @@ SocialMediaSentimentAnalysis/
 
 You can run the analysis tasks either locally or using Docker.
 
-#### **a. Running Locally**
-
-1. **Navigate to the Project Directory**:
-   ```bash
-   cd SocialMediaSentimentAnalysis/
-   ```
-
-2. **Execute Each Task Using `spark-submit`**:
-   ```bash
- 
-     spark-submit src/task1_hashtag_trends.py
-     spark-submit src/task2_engagement_by_age.py
-     spark-submit src/task3_sentiment_vs_engagement.py
-     spark-submit src/task4_top_verified_users.py
-     
-   ```
-
-3. **Verify the Outputs**:
-   Check the `outputs/` directory for the resulting files:
-   ```bash
-   ls outputs/
-   ```
 
 #### **b. Running with Docker (Optional)**
 
