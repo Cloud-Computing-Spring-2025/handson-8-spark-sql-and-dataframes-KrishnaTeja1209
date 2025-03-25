@@ -68,17 +68,8 @@ SocialMediaSentimentAnalysis/
    docker-compose up -d
    ```
 
-2. **Access the Spark Master Container**:
-   ```bash
-   docker exec -it spark-master bash
-   ```
 
-3. **Navigate to the Spark Directory**:
-   ```bash
-   cd /opt/bitnami/spark/
-   ```
-
-4. **Run Your PySpark Scripts Using `spark-submit`**:
+2. **Run Your PySpark Scripts Using `spark-submit`**:
    ```bash
    
    spark-submit src/task1_hashtag_trends.py
@@ -87,15 +78,15 @@ SocialMediaSentimentAnalysis/
    spark-submit src/task4_top_verified_users.py
    ```
 
-5. **Exit the Container**:
+3. **Exit the Container**:
    ```bash
    exit
    ```
 
-6. **Verify the Outputs**:
+4. **Verify the Outputs**:
    On your host machine, check the `outputs/` directory for the resulting files.
 
-7. **Stop the Spark Cluster**:
+5. **Stop the Spark Cluster**:
    ```bash
    docker-compose down
    ```
@@ -295,12 +286,12 @@ A leaderboard of verified users based on audience engagement.
 
 ## 📬 Submission Checklist
 
-- [ ] PySpark scripts in the `src/` directory  
-- [ ] Output files in the `outputs/` directory  
-- [ ] Datasets in the `input/` directory  
-- [ ] Completed `README.md`  
-- [ ] Commit everything to GitHub Classroom  
-- [ ] Submit your GitHub repo link on canvas
+- [✅] PySpark scripts in the `src/` directory  
+- [✅] Output files in the `outputs/` directory  
+- [✅] Datasets in the `input/` directory  
+- [✅] Completed `README.md`  
+- [✅] Commit everything to GitHub Classroom  
+- [✅] Submit your GitHub repo link on canvas
 
 ---
 
