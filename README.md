@@ -54,20 +54,14 @@ SocialMediaSentimentAnalysis/
 └── README.md
 ```
 
-
-
 - **input/**: Contains the input datasets (`posts.csv` and `users.csv`)  
 - **outputs/**: Directory where the results of each task will be saved.
 - **src/**: Contains the individual Python scripts for each task.
 - **docker-compose.yml**: Docker Compose configuration file to set up Spark.
 - **README.md**: Assignment instructions and guidelines.
 
-### **2. Running the Analysis Tasks**
 
-You can run the analysis tasks either locally or using Docker.
-
-
-#### **b. Running with Docker (Optional)**
+#### **Running with Docker**
 
 1. **Start the Spark Cluster**:
    ```bash
@@ -155,26 +149,26 @@ Below is a snippet of the `posts.csv`,`users.csv` to illustrate the data structu
 
 ```
 PostID,UserID,Content,Timestamp,Likes,Retweets,Hashtags,SentimentScore
-101,1,"Loving the new update! #tech #innovation","2023-10-05 14:20:00",120,45,"#tech,#innovation",0.8
-102,2,"This app keeps crashing. Frustrating! #fail","2023-10-05 15:00:00",5,1,"#fail",-0.7
-103,3,"Just another day... #mood","2023-10-05 16:30:00",15,3,"#mood",0.0
-104,4,"Absolutely love the UX! #design #cleanUI","2023-10-06 09:10:00",75,20,"#design,#cleanUI",0.6
-105,5,"Worst experience ever. Fix it. #bug","2023-10-06 10:45:00",2,0,"#bug",-0.9
+101,2,Absolutely love the UX!,2025-03-18 11:51:47,54,5,"#AI,#cleanUI",0.74
+102,2,I’m impressed with the speed.,2025-03-17 14:51:47,112,46,#social,-0.67
+103,7,I’m impressed with the speed.,2025-03-21 04:51:47,54,14,#tech,-0.32
+104,10,Such a smooth interface!,2025-03-18 16:51:47,103,28,"#love,#fail,#cleanUI",0.55
+105,2,Can’t stop using it!,2025-03-19 03:51:47,93,17,"#social,#fail,#UX",0.46
 ```
 
 ---
 
 ```
 UserID,Username,AgeGroup,Country,Verified
-1,@techie42,Adult,US,True
-2,@critic99,Senior,UK,False
-3,@daily_vibes,Teen,India,False
-4,@designer_dan,Adult,Canada,True
-5,@rage_user,Adult,US,False
+0,@stream_bot,Senior,UK,True
+1,@techie42,Adult,India,False
+2,@critic99,Senior,Germany,True
+3,@daily_vibes,Senior,UK,True
+4,@designer_dan,Teen,US,True
+5,@rage_user,Senior,India,True
 ```
 
 ---
-
 
 
 ## **Assignment Tasks**
@@ -201,9 +195,16 @@ A ranked list of the most-used hashtags and their frequencies.
 
 | Hashtag     | Count |
 |-------------|-------|
-| #tech       | 120   |
-| #mood       | 98    |
-| #design     | 85    |
+| #social      | 25   |
+| #bug         | 24   |
+| #love        | 22   |
+| #cleanUI     | 22   |
+| #mood        | 21   |
+| #tech        | 21   |
+| #AI          | 20   |
+| #UX          | 18   |
+| #fail        | 17   |
+| #design      | 15   |
 
 ---
 
@@ -225,9 +226,9 @@ A summary of user engagement behavior categorized by age group.
 
 | Age Group | Avg Likes | Avg Retweets |
 |-----------|-----------|--------------|
-| Adult     | 67.3      | 25.2         |
-| Teen      | 22.0      | 5.6          |
-| Senior    | 9.2       | 1.3          |
+| Senior    | 86.1      | 25.5        |
+| Teen      | 71.8      | 15.1        |
+| Adult     | 67.0      | 16.9        |
 
 ---
 
@@ -248,9 +249,9 @@ Insights into whether happier or angrier posts get more attention.
 
 | Sentiment | Avg Likes | Avg Retweets |
 |-----------|-----------|--------------|
-| Positive  | 85.6      | 32.3         |
-| Neutral   | 27.1      | 10.4         |
-| Negative  | 13.6      | 4.7          |
+| Neutral   | 85.3      | 23.0         |
+| Negative  | 76.0      | 22.4         |
+| Positive  | 75.4      | 23.1         |
 
 ---
 
@@ -272,8 +273,11 @@ A leaderboard of verified users based on audience engagement.
 
 | Username       | Total Reach |
 |----------------|-------------|
-| @techie42      | 1650        |
-| @designer_dan  | 1320        |
+| @critic99      | 1306      |
+| @daily_vibes   | 1266      |
+| @social_queen  | 1140      |
+| @rage_user     | 928       |
+| @designer_dan  | 707       |
 
 ---
 
